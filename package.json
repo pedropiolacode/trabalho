@@ -1,0 +1,26 @@
+{
+  "type": "module",
+  "dependencies": {
+    "@prisma/client": "^6.16.2",
+    "express": "^5.1.0",
+    "prisma": "^6.16.2"
+  },
+  "name": "crud-biblioteca",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FireWater11/CRUD-Biblioteca.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FireWater11/CRUD-Biblioteca/issues"
+  },
+  "homepage": "https://github.com/FireWater11/CRUD-Biblioteca#readme",
+  "description": ""
+}
