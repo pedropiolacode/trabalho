@@ -7,7 +7,7 @@ api_biblioteca.use(express.json());
 api_biblioteca.use('/', rotas_livros);
 api_biblioteca.use('/', rotas_publicas)
 
-api_biblioteca.listen(8080, () => {
-    console.log("Servidor iniciado!")
+api_biblioteca.listen(3000, () => {
+    console.log("start sv")
 });
 

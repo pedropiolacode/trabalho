@@ -2,7 +2,6 @@ import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
 
-// BUSCAR LIVROS
 export async function buscarLivro(req, res) {
     try {
         const livrosBD = await prisma.Book.findMany();
@@ -12,7 +11,6 @@ export async function buscarLivro(req, res) {
     };
 };
 
-// BUSCAR LIVRO PELO ID
 export async function buscarLivroId(req, res) {
     try {
         const id = parseInt(req.params.id);
@@ -38,7 +36,6 @@ export async function buscarLivroId(req, res) {
     };
 };
 
-// ADICIONAR LIVRO
 export async function adicionarLivro(req, res) {
     const {title, autor} = req.body;
 
@@ -54,7 +51,6 @@ export async function adicionarLivro(req, res) {
             }
         });
 
-        // return res.status(201).json({ mensagem: `O Livro ${title} foi cadastrado com sucesso!` });
         return res.status(201).json({ mensagem: `O Livro foi cadastrado com sucesso!` ,novoLivro });
 
 
@@ -63,7 +59,6 @@ export async function adicionarLivro(req, res) {
     };
 };
 
-// DELETAR LIVRO
 export async function deletarLivro(req, res) {
     const idLivro = parseInt(req.params.id);
     
@@ -90,7 +85,6 @@ export async function deletarLivro(req, res) {
     
 };
 
-// PEGAR LIVRO EMPRESTADO
 export async function pegarLivroEmprestado(req, res) {
     const idLivroEmprestar = parseInt(req.params.id);
 
@@ -140,7 +134,6 @@ export async function pegarLivroEmprestado(req, res) {
     };
 };
 
-// DEVOLVER LIVRO
 export async function devolverLivro(req, res) {
     const idLivroEmprestado = parseInt(req.params.id);
 
@@ -191,7 +184,6 @@ export async function devolverLivro(req, res) {
 };
 
 
-// ATUALIZAR LIVRO
 export async function atualizarLivro(req, res) {
     const idAtualizarLivro = parseInt(req.params.id);
 
@@ -202,7 +194,6 @@ export async function atualizarLivro(req, res) {
     try {
         const {title, autor, available} = req.body;
 
-        // avaliable esta === undefined, pq caso o livro tivesse emprestado(false) iria cair nesse IF
         if (!title || !autor || available === undefined) {
             return res.status(404).json({mensagem: "as informacoes do livro devem estar completas"});
         };

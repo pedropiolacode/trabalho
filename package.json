@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/FireWater11/CRUD-Biblioteca.git"
+    "url": "git+https://github.com/pedropiolacode/trabalho.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/FireWater11/CRUD-Biblioteca/issues"
+    "url": "https://github.com/pedropiolacode/trabalho.git"
   },
-  "homepage": "https://github.com/FireWater11/CRUD-Biblioteca#readme",
+  "homepage": "https://github.com/pedropiolacode/trabalho.git",
   "description": ""
 }
